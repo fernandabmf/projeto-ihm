@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleAgendamento.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Laboratório Clínico - Agendamento de Exame</title>
+</head>
+<body>
+    <div class="content">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../img/icon.svg" alt="Imagem ilustrativa">
+            </div>
+            <ul class="menu">
+                <li class="home-link"><a href="../home/home.html">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+                <li class="usuario"><a href="#">Usuário: João da silva</a></li>
+                <li><a href="../login/login.html" class="logoff">Sair</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <h1><span>Agendamento</span> de Exame</h1>
+            <a href="../home/home.html"><i class="fa-solid fa-arrow-left"></i> Voltar para página inicial</a>
+        </header>
+
+        <main>
+            <form action="#" method="POST">
+                <label for="exam-type">Tipo de Exame</label>
+                <select name="exam-type" id="exam-type">
+                    <option value="sangue">Exame de Sangue</option>
+                    <option value="raio-x">Raio-X</option>
+                    <option value="ultrassom">Ultrassom</option>
+                </select>
+
+                <label for="exam-date">Data do Exame</label>
+                <input type="date" name="exam-date" id="exam-date" required>
+
+                <label for="exam-time">Horário do Exame</label>
+                <select name="exam-time" id="exam-time">
+                    <option value="08:00">08:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="16:00">16:00</option>
+                </select>
+
+                <div class="actions">
+                    <button type="submit" class="button">Confirmar Agendamento</button>
+                </div>
+            </form>
+
+        </main>
+    </div>
+
+</body>
+</html>

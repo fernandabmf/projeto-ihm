@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+    --default-border-radius: 1.2rem;
+    --primary-color: #483D8B;
+    --secondary-color: #7B68EE;
+    --text-color: #333;
+    --background-color: #f9f9f9;
+}
+
+body {
+    font-size: 1.4rem;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #483D8B;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.navbar .logo img {
+    width: 60px;
+    height: auto;
+}
+
+.navbar .menu {
+    list-style: none;
+    display: flex;
+}
+.navbar .menu li {
+    margin: 0 15px;
+    font-weight: 500;
+}
+.navbar .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+.navbar .menu a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 40%;
+    height: auto;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-top: 10rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-bottom: 4rem;
+}
+
+h1 span {
+    color: var(--secondary-color);
+}
+
+header a {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos da tela principal */
+.content {
+    display: grid;
+    grid-template-areas: 
+        "img form"
+        "img form";
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+}
+
+main {
+    grid-area: form;
+    width: 100%;
+    max-width: 50rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.25);
+    border-radius: var(--default-border-radius);
+    padding: 4rem;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+main h2 span {
+    color: var(--secondary-color);
+}
+
+main header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+main header i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start; /* Alinha os itens à esquerda */
+}
+
+main form label {
+    text-align: left; /* Alinha o texto do label à esquerda */
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--text-color);
+    width: 100%; /* Garante que o label ocupe toda a largura disponível */
+}
+
+main form input, main form select {
+    width: 100%;
+    height: 4.5rem;
+    padding: 0 1.2rem;
+    background: #fff;
+    border: 0.1rem solid rgba(0, 0, 0, 0.25);
+    border-radius: var(--default-border-radius);
+    font-size: 1.4rem;
+    font-family: inherit;
+    color: var(--text-color);
+}
+
+main form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+main form small {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/* Estilo da lista de exames */
+.exam-results {
+    margin-bottom: 2rem;
+}
+
+.exam-results h2 {
+    font-size: 3.2rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.exam-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--default-border-radius);
+    margin-bottom: 1rem;
+    background-color: #fff;
+}
+
+.exam-info {
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.download-result {
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.download-result:hover {
+    text-decoration: underline;
+}
+
+/* Mensagem quando não há exames */
+#no-results {
+    padding: 1.5rem;
+    background-color: #ffebee;
+    border-radius: var(--default-border-radius);
+    color: #d32f2f;
+}
+
+#no-results .button {
+    margin-top: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    border-radius: var(--default-border-radius);
+    text-decoration: none;
+}
+
+#no-results .button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .content {
+        grid-template-areas: 
+            "img"
+            "form";
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    aside img {
+        height: 20rem;
+    }
+
+    main {
+        padding: 2rem;
+    }
+
+    .options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .option-card {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+
+    form {
+        width: 90%;
+    }
+}
